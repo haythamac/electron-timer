@@ -11,7 +11,8 @@ function createWindow() {
       nodeIntegration: false
     },
     resizable: false,
-    title: 'Electron Timer'
+    title: 'Electron Timer',
+    icon: path.join(__dirname, 'assets', 'chronometer.png'),
   });
 
   mainWindow.loadFile('index.html');
