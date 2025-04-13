@@ -1,0 +1,44 @@
+{
+  "name": "electron-timer",
+  "version": "1.0.0",
+  "description": "A simple timer application built with Electron",
+  "license": "MIT",
+  "author": "krampus",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "electron-builder",
+    "package": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^35.1.5",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.krampus.timer",
+    "productName": "Electron Timer",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "sign": null
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    }
+  }
+}
